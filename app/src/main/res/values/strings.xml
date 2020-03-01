@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">FitnessFiend</string>
     <string name="app_title">Fitness Fiend</string>
+    <string name="app_logo_description">Fitness Fiend Logo</string>
 </resources>
