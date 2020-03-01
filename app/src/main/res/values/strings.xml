@@ -1,5 +1,23 @@
 <resources>
-    <string name="app_name">FitnessFiend</string>
     <string name="app_title">Fitness Fiend</string>
     <string name="app_logo_description">Fitness Fiend Logo</string>
+    <string name="register_btn_text">Register</string>
+    <string name="submit_btn_text">Submit</string>
+    <string name="copyright_2020_text">Copyright -</string>
+    <string name="password_label_text">Password:</string>
+    <string name="username_label_text">Email:</string>
+    <string name="login_screen_error_msg">"Username and/or password not filled in."</string>
+    <string name="login_screen_error_msg_authFailed">"Username and/or password is not correct."</string>
+    <string name="register_screen_error_msg">"One or more fields was not supplied."</string>
+    <string name="register_screen_error_msg_authFailed">"Failed to create new user."</string>
+
+    <!-- Activities Strings-->
+    <string name="title_activity_registration_1">Registration_1</string>
+    <string name="app_name">FitnessFiend</string>
+    <string name="next_btn_text">Next</string>
+    <string name="cancel_btn_text">Cancel</string>
+    <string name="first_name_label">First Name</string>
+    <string name="last_name_label">Last Name</string>
+    <string name="height_label">Height (in inches)</string>
+    <string name="weight_label">Weight (in pounds)</string>
 </resources>
