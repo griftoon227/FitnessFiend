@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "6773540276",
+    "firebase_url": "https://seniorproject-800b3.firebaseio.com",
+    "project_id": "seniorproject-800b3",
+    "storage_bucket": "seniorproject-800b3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:6773540276:android:9d4288b93bd1fe5c605ee1",
+        "android_client_info": {
+          "package_name": "com.example.grift.fitnessfiend"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "6773540276-fh9ibo9gunkjlloaa9dcpq7n8v45uque.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.grift.fitnessfiend",
+            "certificate_hash": "843da77c0f71513aa1b02542d31e9684273b6942"
+          }
+        },
+        {
+          "client_id": "6773540276-c4ckaqje449kcsdp5546a8mskvb0fdnj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.grift.fitnessfiend",
+            "certificate_hash": "6c9b33d164c67281fcbded6b5318e88c2779c0da"
+          }
+        },
+        {
+          "client_id": "6773540276-9i5dd6299javehpd01e8d3jpc3ggrc8i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDESB1W5EAoxpbQvzNjYBK2YhU8mxcCxsY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "6773540276-9i5dd6299javehpd01e8d3jpc3ggrc8i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
