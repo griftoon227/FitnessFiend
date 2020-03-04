@@ -10,6 +10,7 @@
     <string name="login_screen_error_msg_authFailed">"Username and/or password is not correct."</string>
     <string name="register_screen_error_msg">"One or more fields was not supplied."</string>
     <string name="register_screen_error_msg_authFailed">"Failed to create new user."</string>
+    <string name="register2_screen_error_msg_authFailed">"Something went wrong with the authorization."</string>
 
     <!-- Activities Strings-->
     <string name="title_activity_registration_1">Registration_1</string>

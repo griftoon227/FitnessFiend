@@ -48,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
             //check user credentials
             auth.signInWithEmailAndPassword(uName, pWord).addOnSuccessListener(authResult -> {
                 //take the user to the next screen - which includes their apps.
+                startActivity(new Intent(MainActivity.this, MainScreen.class));
             }).addOnFailureListener(e -> Toast.makeText(getApplicationContext(),
                 R.string.login_screen_error_msg_authFailed, Toast.LENGTH_SHORT).show());
         });

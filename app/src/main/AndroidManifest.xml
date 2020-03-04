@@ -12,7 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:appComponentFactory">
-        <activity android:name=".Registration_2"></activity>
+        <activity android:name=".MainScreen"></activity>
+        <activity android:name=".Registration_2" />
         <activity
             android:name=".Registration_1"
             android:label="@string/title_activity_registration_1"

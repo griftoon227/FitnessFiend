@@ -6,24 +6,17 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseApp;
-import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class Registration_1 extends AppCompatActivity {
-    //instance variables
-    private FirebaseAuth auth;
-
     //binds
     @BindView(R.id.firstname)
     EditText firstname;
@@ -54,10 +47,10 @@ public class Registration_1 extends AppCompatActivity {
             return;
         }
         //get the firebase auth and save data to the database
-        auth = FirebaseAuth.getInstance();
+        //instance variables
+        FirebaseAuth auth = FirebaseAuth.getInstance();
         auth.createUserWithEmailAndPassword(emailAcct, pWord).addOnCompleteListener(task -> {
             if (task.isSuccessful()) {
-                Toast.makeText(getApplicationContext(), "Ok", Toast.LENGTH_SHORT).show();
                 //enter the data into the database
                 DatabaseReference database = FirebaseDatabase.getInstance().getReference().child("users");
                 database.child(emailAcct.substring(0, emailAcct.indexOf('@'))).push().setValue(null);
