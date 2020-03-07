@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Registration_2"
     android:orientation="vertical"
-    android:background="@color/appBGColor">
+    android:background="@drawable/custom_background">
 
     <TableLayout
         android:layout_width="match_parent"
@@ -56,11 +56,22 @@
                 android:layout_weight=".5"
                 android:src="@drawable/ic_ff_pill" />
         </TableRow>
+
+        <TableRow
+            android:layout_height="match_parent"
+            android:layout_weight="match_parent">
+            <Button
+                android:id="@+id/submit_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minWidth="@dimen/button_minimum_width_registration1"
+                android:textColor="@color/common_google_signin_btn_text_light_pressed"
+                android:textSize="@dimen/button_text_size"
+                android:background="@drawable/custom_button"
+                android:text="@string/submit_btn_text"/>
+
+        </TableRow>
     </TableLayout>
 
-    <Button
-        android:id="@+id/submit_btn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/submit_btn_text"/>
-</LinearLayout>
+
+</ScrollView>

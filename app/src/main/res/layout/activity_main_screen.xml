@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MainScreen"
     android:orientation="vertical"
-    android:background="@color/appBGColor">
+    android:background="@drawable/custom_background">
 
     <TextView
         android:id="@+id/fitness_scrn_text"

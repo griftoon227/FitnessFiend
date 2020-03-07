@@ -1,139 +1,189 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Registration_1"
-    android:orientation="vertical"
-    android:background="@color/appBGColor">
+    android:background="@drawable/custom_background">
 
     <androidx.appcompat.widget.AppCompatImageView
+        app:layout_constraintTop_toTopOf="parent"
         android:id="@+id/logo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/ic_app_logo_small"
-        android:contentDescription="@string/app_logo_description"/>
+        app:srcCompat="@drawable/ic_app_logo_reg_page"
+        android:contentDescription="@string/app_logo_description"
+        android:layout_marginTop="20dp"/>
 
-    <LinearLayout
+    <androidx.appcompat.widget.AppCompatImageView
+        app:layout_constraintTop_toBottomOf="@id/logo"
+        android:id="@+id/regcaption"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/first_name_label"
-            android:textSize="@dimen/login_screen_text"/>
-        <EditText
-            android:id="@+id/firstname"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:autofillHints="First Name"
-            android:inputType="text"
-            tools:ignore="LabelFor"/>
-    </LinearLayout>
+        app:srcCompat="@drawable/registration_caption"
+        android:contentDescription="@string/app_logo_description"
+        />
 
     <LinearLayout
+        android:id="@+id/background"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="parent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/last_name_label"
-            android:textSize="@dimen/login_screen_text"/>
-        <EditText
-            android:id="@+id/lastname"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:autofillHints="Last Name"
-            android:inputType="text"
-            tools:ignore="LabelFor"/>
-    </LinearLayout>
+        android:background="@drawable/registration_frame"
+        android:orientation="vertical"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/username_label_text"
-            android:textSize="@dimen/login_screen_text"/>
-        <EditText
-            android:id="@+id/email"
+        <LinearLayout
+            app:layout_constraintTop_toBottomOf="parent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:autofillHints="Email"
-            android:inputType="textEmailAddress"
-            tools:ignore="LabelFor"/>
-    </LinearLayout>
+            android:orientation="horizontal"
+            android:id="@+id/firstnamelayout">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/first_name_label"
+                android:textSize="@dimen/login_screen_text"/>
+            <EditText
+                android:id="@+id/firstname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="First Name"
+                android:inputType="text"
+                tools:ignore="LabelFor"/>
+        </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/password_label_text"
-            android:textSize="@dimen/login_screen_text"/>
-        <EditText
-            android:id="@+id/password"
+        <LinearLayout
+            android:id="@+id/lastnamelayout"
+            app:layout_constraintTop_toBottomOf="@id/firstnamelayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:autofillHints="Password"
-            android:inputType="textPassword"
-            tools:ignore="LabelFor"/>
-    </LinearLayout>
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/last_name_label"
+                android:textSize="@dimen/login_screen_text"/>
+            <EditText
+                android:id="@+id/lastname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="Last Name"
+                android:inputType="text"
+                tools:ignore="LabelFor"/>
+        </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/height_label"
-            android:textSize="@dimen/login_screen_text"/>
-        <EditText
-            android:id="@+id/height"
+        <LinearLayout
+            android:id="@+id/emaillayout"
+            app:layout_constraintTop_toBottomOf="@id/lastnamelayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:autofillHints="Height"
-            android:inputType="number"
-            tools:ignore="LabelFor"/>
-    </LinearLayout>
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/username_label_text"
+                android:textSize="@dimen/login_screen_text"/>
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="Email"
+                android:inputType="textEmailAddress"
+                tools:ignore="LabelFor"/>
+        </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/weight_label"
-            android:textSize="@dimen/login_screen_text"/>
-        <EditText
-            android:id="@+id/weight"
+        <LinearLayout
+            android:id="@+id/passwordlayout"
+            app:layout_constraintTop_toBottomOf="@id/emaillayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:autofillHints="Weight"
-            android:inputType="number"
-            tools:ignore="LabelFor"/>
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/password_label_text"
+                android:textSize="@dimen/login_screen_text"/>
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="Password"
+                android:inputType="textPassword"
+                tools:ignore="LabelFor"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/heightlayout"
+            app:layout_constraintTop_toBottomOf="@id/passwordlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/height_label"
+                android:textSize="@dimen/login_screen_text"/>
+            <EditText
+                android:id="@+id/height"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="Height"
+                android:inputType="number"
+                tools:ignore="LabelFor"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/weightlayout"
+            app:layout_constraintTop_toBottomOf="@id/heightlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/weight_label"
+                android:textSize="@dimen/login_screen_text"/>
+            <EditText
+                android:id="@+id/weight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="Weight"
+                android:inputType="number"
+                tools:ignore="LabelFor"/>
+        </LinearLayout>
     </LinearLayout>
 
     <Button
         android:id="@+id/next_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:minWidth="@dimen/button_minimum_width_registration1"
+        android:textColor="@color/common_google_signin_btn_text_light_pressed"
+        android:textSize="@dimen/button_text_size"
+        android:background="@drawable/custom_button"
         android:text="@string/next_btn_text"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        android:layout_marginBottom="65dp"
+        android:layout_marginStart="2dp"/>
 
     <Button
         android:id="@+id/cancel_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:minWidth="@dimen/button_minimum_width_registration1"
+        android:textColor="@color/common_google_signin_btn_text_light_pressed"
+        android:textSize="@dimen/button_text_size"
+        android:background="@drawable/custom_button"
         android:text="@string/cancel_btn_text"
-        android:layout_gravity="center"/>
-</LinearLayout>
+        android:layout_gravity="center"
+        android:layout_marginBottom="65dp"
+        android:layout_marginEnd="2dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
