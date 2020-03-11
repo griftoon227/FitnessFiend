@@ -4,4 +4,7 @@
     <dimen name="button_text_size">17sp</dimen>
     <dimen name="button_minimum_width">200dp</dimen>
     <dimen name="button_minimum_width_registration1">175dp</dimen>
+    <dimen name="registration2_btns_margin">35dp</dimen>
+    <dimen name="registration2_card_radius">8dp</dimen>
+    <dimen name="cardview_caption_size">22sp</dimen>
 </resources>

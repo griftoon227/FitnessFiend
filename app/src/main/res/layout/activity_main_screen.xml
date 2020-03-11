@@ -6,26 +6,69 @@
     android:layout_height="match_parent"
     tools:context=".MainScreen"
     android:orientation="vertical"
-    android:background="@drawable/custom_background">
+    android:background="@drawable/custom_background"
+    android:layout_marginTop="10dp">
 
-    <TextView
-        android:id="@+id/fitness_scrn_text"
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-    <TextView
-        android:id="@+id/gym_maps_scrn_text"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_app_logo_reg_page"
+        android:contentDescription="@string/app_logo_description" />
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-    <TextView
-        android:id="@+id/macros_scrn_text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-    <TextView
-        android:id="@+id/medicine_scrn_text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-    <TextView
-        android:id="@+id/recipe_scrn_text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:baselineAligned="false">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight=".2">
+            <ImageButton
+                android:id="@+id/fitness"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_ff_weights"
+                android:visibility="gone"/>
+            <ImageButton
+                android:id="@+id/macros"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_ff_macros"
+                android:visibility="gone"/>
+            <ImageButton
+                android:id="@+id/recipes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_ff_recipe"
+                android:visibility="gone"/>
+            <ImageButton
+                android:id="@+id/gym_maps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_ff_gym"
+                android:visibility="gone"/>
+            <ImageButton
+                android:id="@+id/reminders"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_ff_reminder2"
+                android:visibility="gone"/>
+            <ImageButton
+                android:id="@+id/settings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_ff_settings"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight=".8">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="This is for our data."/>
+        </LinearLayout>
+    </LinearLayout>
 </LinearLayout>

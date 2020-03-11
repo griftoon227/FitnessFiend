@@ -4,8 +4,12 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,11 +24,31 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.Objects;
 
 public class MainScreen extends AppCompatActivity {
-    @BindView(R.id.fitness_scrn_text) TextView fitnessText;
-    @BindView(R.id.gym_maps_scrn_text) TextView gymMapsText;
-    @BindView(R.id.macros_scrn_text) TextView macrosText;
-    @BindView(R.id.medicine_scrn_text) TextView medicineText;
-    @BindView(R.id.recipe_scrn_text) TextView recipeText;
+    @BindView(R.id.fitness) ImageButton fitness;
+    @BindView(R.id.macros) ImageButton macros;
+    @BindView(R.id.gym_maps) ImageButton gym_maps;
+    @BindView(R.id.recipes) ImageButton recipes;
+    @BindView(R.id.reminders) ImageButton reminders;
+    @BindView(R.id.settings) ImageButton settings;
+
+    @OnClick(R.id.fitness) void goToFitness() {
+        startActivity(new Intent(MainScreen.this, Fitness.class));
+    }
+    @OnClick(R.id.macros) void goToMacros() {
+        startActivity(new Intent(MainScreen.this, Macros.class));
+    }
+    @OnClick(R.id.gym_maps) void goToMaps() {
+        startActivity(new Intent(MainScreen.this, gym_maps.class));
+    }
+    @OnClick(R.id.reminders) void goToReminders() {
+        startActivity(new Intent(MainScreen.this, reminders.class));
+    }
+    @OnClick(R.id.recipes) void goToRecipes() {
+        startActivity(new Intent(MainScreen.this, recipes.class));
+    }
+    @OnClick(R.id.settings) void goToSettings() {
+        startActivity(new Intent(MainScreen.this, settings.class));
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,19 +66,19 @@ public class MainScreen extends AppCompatActivity {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                     if ((boolean)dataSnapshot.child("Fitness").getValue()){
-                        fitnessText.setText("Fitness");
+                        fitness.setVisibility(View.VISIBLE);
                     }
                     if ((boolean)dataSnapshot.child("Gym").getValue()){
-                        gymMapsText.setText("Gym Maps");
+                        gym_maps.setVisibility(View.VISIBLE);
                     }
                     if ((boolean)dataSnapshot.child("Macros").getValue()){
-                        macrosText.setText("Macros");
+                        macros.setVisibility(View.VISIBLE);
                     }
-                    if ((boolean)dataSnapshot.child("Medicine").getValue()){
-                        medicineText.setText("Medicine");
+                    if ((boolean)dataSnapshot.child("Reminders").getValue()){
+                        reminders.setVisibility(View.VISIBLE);
                     }
                     if ((boolean)dataSnapshot.child("Recipe").getValue()){
-                        recipeText.setText("Recipe");
+                        recipes.setVisibility(View.VISIBLE);
                     }
                 }
                 @Override

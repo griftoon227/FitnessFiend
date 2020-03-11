@@ -21,4 +21,9 @@
     <string name="last_name_label">Last Name</string>
     <string name="height_label">Height (in inches)</string>
     <string name="weight_label">Weight (in pounds)</string>
+    <string name="fitness_cardview_lbl_text">Fitness</string>
+    <string name="macros_cardview_lbl_text">Macros</string>
+    <string name="gym_maps_cardview_lbl_text">Gym Maps</string>
+    <string name="recipes_cardview_lbl_text">Recipes</string>
+    <string name="reminders_cardview_lbl_text">Reminders</string>
 </resources>

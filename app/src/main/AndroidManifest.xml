@@ -12,7 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:appComponentFactory">
-        <activity android:name=".MainScreen"></activity>
+        <activity android:name=".recipes"></activity>
+        <activity android:name=".reminders" />
+        <activity android:name=".gym_maps" />
+        <activity android:name=".settings" />
+        <activity android:name=".Fitness" />
+        <activity android:name=".Macros" />
+        <activity android:name=".MainScreen" />
         <activity android:name=".Registration_2" />
         <activity
             android:name=".Registration_1"

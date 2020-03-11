@@ -22,8 +22,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/registration_caption"
-        android:contentDescription="@string/app_logo_description"
-        />
+        android:contentDescription="@string/app_logo_description" />
 
     <LinearLayout
         android:id="@+id/background"
