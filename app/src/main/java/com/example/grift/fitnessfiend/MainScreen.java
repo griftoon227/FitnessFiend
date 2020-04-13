@@ -41,7 +41,7 @@ public class MainScreen extends AppCompatActivity {
         startActivity(new Intent(MainScreen.this, gym_maps.class));
     }
     @OnClick(R.id.reminders) void goToReminders() {
-        startActivity(new Intent(MainScreen.this, reminders.class));
+        startActivity(new Intent(MainScreen.this, RemindersActivity.class));
     }
     @OnClick(R.id.recipes) void goToRecipes() {
         startActivity(new Intent(MainScreen.this, recipes.class));

@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "6773540276-4tsic8cl6nf79mv3s3f62c4l41fcqegc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.grift.fitnessfiend",
+            "certificate_hash": "0630a0c6badd6a921a1482aa528e387820262573"
+          }
+        },
+        {
           "client_id": "6773540276-fh9ibo9gunkjlloaa9dcpq7n8v45uque.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {

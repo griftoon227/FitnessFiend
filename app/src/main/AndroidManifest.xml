@@ -12,8 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:appComponentFactory">
-        <activity android:name=".recipes"></activity>
-        <activity android:name=".reminders" />
+
+        <activity android:name=".MedicineReminderActivity" />
+        <activity
+            android:name=".RemindersActivity"
+            android:label="@string/title_activity_reminders"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".recipes" />
         <activity android:name=".gym_maps" />
         <activity android:name=".settings" />
         <activity android:name=".Fitness" />
@@ -31,6 +36,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".CustomReminderActivity"/>
+
+        <receiver android:name=".GymReminderBroadcast" />
+        <receiver android:name=".WeightReminderBroadcast" />
+        <receiver android:name=".MedicineBroadcast" />
+
     </application>
 
 </manifest>

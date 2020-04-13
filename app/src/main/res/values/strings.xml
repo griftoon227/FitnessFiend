@@ -26,4 +26,37 @@
     <string name="gym_maps_cardview_lbl_text">Gym Maps</string>
     <string name="recipes_cardview_lbl_text">Recipes</string>
     <string name="reminders_cardview_lbl_text">Reminders</string>
+
+    <string name="title_activity_reminders">Reminders</string>
+    <string name="Medicine">Medicine</string>
+    <string name="Gym">Gym</string>
+    <string name="Weight">Weight</string>
+    <string name="time_last_went">Time last went:</string>
+    <string name="time_to_remind">Time to remind</string>
+    <string name="reminderFrequency">Frequency of Reminder</string>
+    <string name="set_reminder">Set Reminder</string>
+
+    <string name="day">Date</string>
+    <string name="time">Time</string>
+    <string name="medication_name">Medication Name</string>
+    <string name="delete_reminder">Delete Reminder</string>
+    <string name="repetition_interval">Repitition Interval</string>
+    <string name="repeat_type">Repeat number</string>
+    <string name="when">When</string>
+    <string name="frequency">Frequency</string>
+    <string name="custom">Custom</string>
+    <string name="name">Name</string>
+    
+    
+    <string-array name="types">
+        <item>Medicine</item>
+        <item>Weight</item>
+        <item>Gym</item>
+        <item>Custom</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
 </resources>
