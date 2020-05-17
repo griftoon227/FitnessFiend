@@ -4,12 +4,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.Objects;
 
 import androidx.appcompat.app.AppCompatActivity;
 import butterknife.BindView;
@@ -30,6 +33,10 @@ public class Registration_1 extends AppCompatActivity {
     EditText height;
     @BindView(R.id.weight)
     EditText weight;
+    @BindView(R.id.age)
+    EditText age;
+    @BindView(R.id.gender)
+    Spinner gender;
     @BindView(R.id.next_btn)
     Button next_btn;
 
@@ -41,8 +48,9 @@ public class Registration_1 extends AppCompatActivity {
         String pWord = password.getText().toString();
         String hght = height.getText().toString();
         String wght = weight.getText().toString();
+        String userAge = age.getText().toString();
         if (fName.equals("") || lName.equals("") || emailAcct.equals("") || pWord.equals("") || hght.equals("") ||
-                wght.equals("")) { Toast.makeText(getApplicationContext(),R.string.register_screen_error_msg,
+                wght.equals("") || userAge.equals("")) { Toast.makeText(getApplicationContext(),R.string.register_screen_error_msg,
                 Toast.LENGTH_SHORT).show();
             return;
         }
@@ -51,22 +59,33 @@ public class Registration_1 extends AppCompatActivity {
         FirebaseAuth auth = FirebaseAuth.getInstance();
         auth.createUserWithEmailAndPassword(emailAcct, pWord).addOnCompleteListener(task -> {
             if (task.isSuccessful()) {
-                //enter the data into the database
-                DatabaseReference database = FirebaseDatabase.getInstance().getReference().child("users");
-                database.child(emailAcct.substring(0, emailAcct.indexOf('@'))).push().setValue(null);
-                database.child(emailAcct.substring(0, emailAcct.indexOf('@'))).child("firstname").setValue(fName);
-                database.child(emailAcct.substring(0, emailAcct.indexOf('@'))).child("lastname").setValue(lName);
-                database.child(emailAcct.substring(0, emailAcct.indexOf('@'))).child("height").setValue(hght);
-                database.child(emailAcct.substring(0, emailAcct.indexOf('@'))).child("weight").setValue(wght);
+                    DatabaseReference database = FirebaseDatabase.getInstance().getReference().child("users");
+                    String UID = Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getUid();
+                    database.child(UID).child("firstname").setValue(fName);
+                    database.child(UID).child("lastname").setValue(lName);
+                    database.child(UID).child("height").setValue(hght);
+                    database.child(UID).child("weight").setValue(wght);
+                    database.child(UID).child("age").setValue(userAge);
+                    database.child(UID).child("gender").setValue(gender.getSelectedItem().toString());
 
-                DatabaseReference screens = database.child(emailAcct.substring(0, emailAcct.indexOf('@'))).child("screens");
-                screens.child("Fitness").setValue(false);
-                screens.child("Gym").setValue(false);
-                screens.child("Macros").setValue(false);
-                screens.child("Medicine").setValue(false);
-                screens.child("Recipe").setValue(false);
-                //go to next part of registering
-                startActivity(new Intent(this, Registration_2.class));
+                    //setup weekly weight
+                    DatabaseReference weeklyWeight = database.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("weight_by_week");
+                    weeklyWeight.child("sunday").setValue(wght);
+                    weeklyWeight.child("monday").setValue(wght);
+                    weeklyWeight.child("tuesday").setValue(wght);
+                    weeklyWeight.child("wednesday").setValue(wght);
+                    weeklyWeight.child("thursday").setValue(wght);
+                    weeklyWeight.child("friday").setValue(wght);
+                    weeklyWeight.child("saturday").setValue(wght);
+
+                    DatabaseReference screens = database.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("screens");
+                    screens.child("Fitness").setValue(false);
+                    screens.child("Gym").setValue(false);
+                    screens.child("Macros").setValue(false);
+                    screens.child("Reminders").setValue(false);
+                    screens.child("Recipe").setValue(false);
+                    //go to next part of registering
+                    startActivity(new Intent(this, Registration_2.class));
             }
             else {
                 Toast.makeText(getApplicationContext(), R.string.register_screen_error_msg_authFailed, Toast.LENGTH_SHORT).show();

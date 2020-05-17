@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainScreen"
     android:orientation="vertical"
-    android:background="@drawable/custom_background"
+    android:background="#FFFFFF"
     android:layout_marginTop="10dp">
 
     <ImageView
@@ -29,46 +28,83 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_ff_weights"
-                android:visibility="gone"/>
+                android:visibility="gone"
+                android:layout_margin="2dp"
+                android:background="@drawable/custom_macro_screen_nav_button"
+                android:contentDescription="@string/fitness_button_main_screen_cd" />
             <ImageButton
                 android:id="@+id/macros"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_ff_macros"
-                android:visibility="gone"/>
+                android:visibility="gone"
+                android:layout_margin="2dp"
+                android:background="@drawable/custom_macro_screen_nav_button"
+                android:contentDescription="@string/macros_button_main_screen_cd" />
             <ImageButton
                 android:id="@+id/recipes"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_ff_recipe"
-                android:visibility="gone"/>
+                android:visibility="gone"
+                android:layout_margin="2dp"
+                android:background="@drawable/custom_macro_screen_nav_button"
+                android:contentDescription="@string/recipes_button_main_screen_cd" />
             <ImageButton
                 android:id="@+id/gym_maps"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_ff_gym"
-                android:visibility="gone"/>
+                android:visibility="gone"
+                android:layout_margin="2dp"
+                android:background="@drawable/custom_macro_screen_nav_button"
+                android:contentDescription="@string/gym_maps_button_main_screen_cd" />
             <ImageButton
                 android:id="@+id/reminders"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_ff_reminder2"
-                android:visibility="gone"/>
+                android:visibility="gone"
+                android:layout_margin="2dp"
+                android:background="@drawable/custom_macro_screen_nav_button"
+                android:contentDescription="@string/reminders_button_main_screen_cd" />
             <ImageButton
                 android:id="@+id/settings"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_ff_settings"/>
+                android:src="@drawable/ic_ff_settings"
+                android:visibility="gone"
+                android:layout_margin="2dp"
+                android:background="@drawable/custom_macro_screen_nav_button"
+                android:contentDescription="@string/settings_button_main_screen_cd" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical"
             android:layout_weight=".8">
             <TextView
+                android:id="@+id/weight"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="This is for our data."/>
+                android:textColor="@color/appThemeColor"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:textSize="20sp"/>
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/weight_line_chart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
         </LinearLayout>
     </LinearLayout>
+    <Button
+        android:id="@+id/logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/logout_button_text"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        style="?android:attr/buttonBarButtonStyle"
+        android:textColor="#000000"
+        android:layout_gravity="center_horizontal"/>
 </LinearLayout>

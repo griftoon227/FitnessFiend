@@ -1,9 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout
+    android:id="@+id/main_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".gym_maps">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".gym_maps"
+    android:orientation="vertical"
+    android:background="@color/appThemeColor">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/gym_title"
+        android:textSize="40sp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:gravity="center"
+        style="@style/TitleTextShadow"/>
+
+    <EditText
+        android:inputType="text"
+        android:id="@+id/location_search"
+        android:layout_width="310dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:textColorHint="@android:color/darker_gray"
+        android:textColor="@android:color/white"
+        android:hint="@string/search_gym_hint"
+        android:textStyle="italic"
+        android:fontFamily="monospace"
+        android:importantForAutofill="no"
+        android:layout_marginStart="3dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/search_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/search_btn_gym_label"
+            android:background="@android:color/white"
+            android:textColor="@color/appThemeColor"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginStart="5dp"
+            android:fontFamily="monospace"
+            android:shadowColor="#000000"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/add_gym_btn"
+            style="?android:attr/buttonBarButtonStyle"
+            android:textColor="@android:color/white"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/add_gym_btn_label"/>
+
+        <Button
+            style="?android:attr/buttonBarButtonStyle"
+            android:id="@+id/view_history_btn"
+            android:textColor="@android:color/white"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/view_history_gym_btn_label"/>
+    </LinearLayout>
+
+    <!-- fragment houses the actual maps -->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
