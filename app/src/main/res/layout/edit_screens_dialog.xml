@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+    <CheckBox
+        android:id="@+id/fitness_chkbx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/settings_fitness_checkbox_text"
+        android:textColor="@color/appThemeColor"/>
+    <CheckBox
+        android:id="@+id/macros_chkbx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/settings_macros_checkbox_text"
+        android:textColor="@color/appThemeColor"/>
+    <CheckBox
+        android:id="@+id/recipe_chkbx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/settings_recipe_checkbox_text"
+        android:textColor="@color/appThemeColor"/>
+    <CheckBox
+        android:id="@+id/gym_maps_chkbx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/settings_gym_maps_checkbox_text"
+        android:textColor="@color/appThemeColor"/>
+    <CheckBox
+        android:id="@+id/reminders_chkbx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/settings_reminders_checkbox_text"
+        android:textColor="@color/appThemeColor"/>
+</LinearLayout>

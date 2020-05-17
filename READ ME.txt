@@ -1,0 +1,8 @@
+- You can make your own or you can use testing17@testing.com, with the password testing123, which
+is the account I used for our presentation that has some data already populated into it for each of the screens.
+- To get the project into android studio, go to file, and open the project structure from the root FitnessFiend folder so that everyrthing is inside of Android Studio. You will need to configure the project, use the default settings and click Apply. Once gradle builds, you should be able to run the app (this will work for the other Android projects you test as well).
+- Our only concern is with the Google API used on the gym maps screen. To fix if you have an issue (if the map does not populate, it will not throw you an error):
+	* Go to the google_maps_api.xml file in the values folder under res/values
+	* You will need to go the the Google Developer Console and search for the 
+	Places API and check those boxes off (use this link https://console.developers.google.com/)
+	* Once you do that, you should be able to go into them and secure an API key to replace the 	one in that file. This should fix the issue. If not, please contact me.	

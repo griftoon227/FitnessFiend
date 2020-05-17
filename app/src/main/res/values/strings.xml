@@ -345,6 +345,11 @@
     <string name="search_all_recipes_btn_text">Search All Recipes</string>
     <string name="edit_features_btn_text">Edit Features</string>
     <string name="list_of_workouts_title_text">List of Workouts</string>
+    <string name="settings_reminders_checkbox_text">Reminders</string>
+    <string name="settings_gym_maps_checkbox_text">Gym Maps</string>
+    <string name="settings_recipe_checkbox_text">Recipe</string>
+    <string name="settings_macros_checkbox_text">Macros</string>
+    <string name="settings_fitness_checkbox_text">Fitness</string>
     <string-array name="types">
         <item>Medicine</item>
         <item>Weight</item>
